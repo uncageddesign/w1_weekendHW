@@ -22,15 +22,14 @@ def stock_count(count)
   count[:pets].length
 end
 
-# def pets_by_breed(shop, breed)
-#   pets = []
-#   for pet in shop[:pets]
-#     pets.push(breed[:pets][:breed])
-#   end
-#   pets.count
-# end
+def pets_by_breed(shop, breed)
+  pets = []
+  shop[:pets][:breed].each do |pet|
+    pets.push(pet)
+  end
+  return pets.count(breed)
+end
 
-#
 #   # set up an empty array
 #   # loop through the array of pets array of the pets hash
 #   # check if each pets breed matches the breed passed into the function
